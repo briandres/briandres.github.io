@@ -89,6 +89,7 @@ footer {
 
 .logo, .privacy, .social-media, .copyright {
   margin-top: 30px; /* Añadir espacio entre cada elemento */
+  align-items: center;
 }
 
 .social-media {
