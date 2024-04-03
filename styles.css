@@ -1,0 +1,170 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Comfortaa', sans-serif; /* Aplica la fuente Comfortaa a todo el texto del cuerpo */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+  background-attachment: fixed;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Graduate', sans-serif; /* Aplica la fuente Graduate a los encabezados */
+  text-align: justify;
+}
+
+nav {
+  background-color: #1b106a; /* Color de fondo de la barra de navegación */
+  color: #fff; /* Color de texto */
+  padding: 20px 0; /* Aumenta el espacio interno superior e inferior de la barra de navegación */
+  display: flex; /* Usa flexbox para alinear el contenido verticalmente */
+  justify-content: center; /* Centra horizontalmente el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-align: center; /* Centra el texto */
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+.container {
+  width: 90%; /* Ancho máximo del contenedor al 90% */
+  margin: 100px auto; /* Ajustar el margen superior e inferior y centrar horizontalmente */
+  text-align: center;
+}
+
+#titulo {
+  margin-bottom: 20px; /* Agregamos un margen inferior para separarlo del cuadro */
+}
+
+.container.privacy-content {
+  margin: 20px auto; /* Ajustar el margen superior e inferior */
+  max-width: 800px; /* Ancho máximo del contenedor */
+  padding: 0 20px; /* Ajustar el relleno lateral */
+  text-align: justify; /* Justificar el texto en lugar de centrarlo */
+}
+
+.privacy-content h1,
+.privacy-content h2,
+.privacy-content p {
+  margin-bottom: 10px; /* Reducir el margen inferior */
+}
+
+.privacy-content ul {
+  list-style-type: none; /* Eliminar los marcadores de lista */
+  padding-left: 0; /* Eliminar el relleno izquierdo de la lista */
+}
+
+.privacy-content ul li {
+  margin-bottom: 5px; /* Reducir el margen inferior de los elementos de lista */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0; /* Ajustar el relleno superior e inferior */
+}
+
+.privacy {
+  margin-top: 20px; /* Ajustar el margen superior */
+}
+
+#cuadro {
+  width: 300px;
+  height: 50px;
+  background-color: #3498db;
+  margin: 0 auto; /* Esto centra el cuadro horizontalmente */
+  border-radius: 50px; /* Radio de las esquinas redondeadas */
+}
+
+#cambiarColorBtn {
+  padding: 10px 20px;
+  font-size: 1em;
+  background-color: #2ecc71;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  border-radius: 20px; /* Radio de las esquinas redondeadas */
+}
+
+body img {
+  max-width: 100%; /* Establecer el ancho máximo al 100% */
+  height: auto; /* Permitir que la altura se ajuste automáticamente */
+}
+
+footer {
+  background-color: white;
+  height: auto;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  margin-top: 20px; /* Reducimos el margen superior */
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column; /* Apilar elementos verticalmente */
+  align-items: center; /* Centrar elementos horizontalmente */
+  padding: 10px 20px; /* Ajusta el relleno según sea necesario */
+  text-align: center; /* Centrar el texto */
+}
+
+.logo, .privacy, .social-media, .copyright {
+  margin-top: 30px; /* Añadir espacio entre cada elemento */
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px; /* Ajustar la separación desde la parte superior */
+}
+
+.social-media img {
+  width: 30px; /* Ajustar el ancho de los iconos */
+  height: auto;
+  margin: 0 30px; /* Ajustar el espacio entre los iconos */
+}
+
+/* Estilo para el fondo de la página de inicio */
+.index-page {
+  background-image: url(IMG/B1.jpg); /* Cambia 'background.jpg' por la imagen que desees */
+}
+
+/* Estilo para el fondo de la página de privacidad */
+.privacy-page {
+  background-image: url(IMG/B5.jpg); /* Cambia 'otro-fondo.jpg' por la imagen que desees */
+}
+
+/* Estilo para el fondo de la página de acerca-de */
+.info-page {
+  background-image: url(IMG/AC1.jpg); /* Cambia 'otro-fondo.jpg' por la imagen que desees */
+}
+
+/* Estilo para el fondo de la página de servicios */
+.services-page {
+  background-image: url(IMG/SV2.jpg); /* Cambia 'otro-fondo.jpg' por la imagen que desees */
+}
+
+/* Estilo para el fondo de la página de contacto */
+.contact-page {
+  background-image: url(IMG/CT3.jpg); /* Cambia 'otro-fondo.jpg' por la imagen que desees */
+}
