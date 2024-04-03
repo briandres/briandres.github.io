@@ -168,3 +168,8 @@ footer {
 .contact-page {
   background-image: url(IMG/CT3.jpg); /* Cambia 'otro-fondo.jpg' por la imagen que desees */
 }
+
+/* Estilo para el fondo de la pÃ¡gina de 404 */
+.eror-page {
+  background-image: url(IMG/B6.jpg); /* Cambia 'otro-fondo.jpg' por la imagen que desees */
+}
