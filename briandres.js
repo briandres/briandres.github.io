@@ -7,23 +7,26 @@ document.addEventListener("DOMContentLoaded", () => {
     document.querySelector("#current-year").textContent = getCurrentYear();
 });
 
-// Funciones para abrir y cerrar el menú de navegación móvil
+
 function openNav() {
-    document.getElementById("mobile-menu").style.width = "100%";
-    document.body.style.overflow = "hidden";  // Bloquear scroll en el body
+    var menu = document.getElementById("mobile-menu");
+    menu.style.display = "block"; // Mostrar el menú
+    menu.style.width = "100%"; // Ajusta esto según el ancho que quieras darle al menú
+    document.body.style.overflow = "hidden"; // Detiene el scroll del cuerpo cuando el menú está abierto
+}
+
+function closeNav() {
+    var menu = document.getElementById("mobile-menu");
+    menu.style.display = "none"; // Oculta el menú nuevamente
+    menu.style.width = "0%"; // Reinicia el ancho del menú
+    document.body.style.overflow = ""; // Restablece el scroll del cuerpo
 }
 
 window.addEventListener("pageshow", function(event) {
     if (event.persisted || window.performance && window.performance.navigation.type === 2) {
-        closeNav(); // Asegúrate de que el menú móvil esté cerrado cuando regresas a la página
+        closeNav(); // Asegúrate de que el menú móvil esté cerrado al regresar
     }
 });
-
-function closeNav() {
-    if (event) event.preventDefault();
-    document.getElementById("mobile-menu").style.width = "0%";
-    document.body.style.overflow = "auto";  // Restaurar scroll en el body
-}
 
 
 // Efecto de desaparición del texto al hacer scroll
