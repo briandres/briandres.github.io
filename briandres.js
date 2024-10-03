@@ -19,6 +19,13 @@ function closeNav() {
     document.body.style.overflow = "auto";  // Restaurar scroll en el body
 }
 
+window.addEventListener("pageshow", function(event) {
+    if (event.persisted || window.performance && window.performance.navigation.type === 2) {
+        // Esto verifica si se está volviendo a la página desde el cache del navegador
+        window.scrollTo(0, 0); // Esto vuelve a poner el scroll en la parte superior
+    }
+});
+
 // Efecto de desaparición del texto al hacer scroll
 document.addEventListener("DOMContentLoaded", () => {
     // Seleccionar el texto que quieres hacer desaparecer al hacer scroll
