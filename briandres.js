@@ -13,6 +13,12 @@ function openNav() {
     document.body.style.overflow = "hidden";  // Bloquear scroll en el body
 }
 
+window.addEventListener("pageshow", function(event) {
+    if (event.persisted || window.performance && window.performance.navigation.type === 2) {
+        closeNav(); // Asegúrate de que el menú móvil esté cerrado cuando regresas a la página
+    }
+});
+
 function closeNav() {
     if (event) event.preventDefault();
     document.getElementById("mobile-menu").style.width = "0%";
