@@ -10,10 +10,12 @@ document.addEventListener("DOMContentLoaded", () => {
 // Funciones para abrir y cerrar el menú de navegación móvil
 function openNav() {
     document.getElementById("mobile-menu").style.width = "100%";
+    document.body.style.overflow = "hidden";  // Bloquear scroll en el body
 }
 
 function closeNav() {
     document.getElementById("mobile-menu").style.width = "0%";
+    document.body.style.overflow = "auto";  // Restaurar scroll en el body
 }
 
 // Efecto de desaparición del texto al hacer scroll
