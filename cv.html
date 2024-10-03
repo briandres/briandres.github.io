@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - briandres</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="icon" type="image/x-icon" href="IMG/LOGOS/BB.ico">
+    <body class="#"></body>
+</head>
+
+<body>
+    <header class="header">
+        <div class="logo">
+            <img src="IMG/LOGOS/SVG/BS1.svg" alt="Logo briandres">
+        </div>
+        <nav>
+           <ul class="nav-links">
+            <ul class="nav-links">
+                <li><a href="/">Inicio</a></li>
+                <li><a href="cv">CV</a></li>
+                <li><a href="perfil">Sobre mí</a></li>
+                <li><a href="servicios">Servicios</a></li>
+           </ul>            
+        </nav>
+        <a class="btn" href="contacto"><button>Contacto</button></a>
+
+        <a onclick="openNav()" class="menu" href="#"><button>Menu</button></a>
+
+        <div id="mobile-menu" class="overlay">
+            <a onclick="closeNav()" href="" class="close">&times;</a>
+            <div class="overlay-content">
+                <a href="/">Inicio</a>
+                <a href="cv">CV</a>
+                <a href="perfil">Sobre mí</a>
+                <a href="servicios">Servicios</a>
+                <a href="contacto"">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+
+    <footer class="footer">
+        <section class="footer__sections">
+            <div class="footer__sections-container container">
+
+                <article class="footer__section">
+                    <h3 class="footer__section-title">Legal</h3>
+                    <ul class="footer__section-table">
+                        <li class="footer__section-links">
+                            <a href="tyc" class="footer__section-link">Términos y Condiciones</a>
+                        </li>
+
+                        <li class="footer__section-links">
+                            <a href="pdp" class="footer__section-link">Política de Privacidad</a>
+                        </li>
+
+                        <li class="footer__section-links">
+                            <a href="pdc" class="footer__section-link">Política de Cookies</a>
+                        </li>
+                        <li class="footer__section-links">
+                            <a href="contacto" class="footer__section-link">Contacto</a>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="footer__section">
+                    <h3 class="footer__section-title">Redes Sociales</h3>
+                    <div class="social__container">
+                        <a href="https://www.facebook.com/briandres" target="_blank" class="social__icon">
+                            <img src="IMG/SOCIAL/SVG/Facebook.svg" alt="Facebook">
+                        </a>
+                        <a href="https://www.linkedin.com/in/briandres" target="_blank" class="social__icon">
+                            <img src="IMG/SOCIAL/SVG/Linked.svg" alt="Linkedin">
+                        </a>
+                        <a href="https://www.wa.link/wgx00m" target="_blank" class="social__icon">
+                            <img src="IMG/SOCIAL/SVG/WhatsApp.svg" alt="WhatsApp">
+                        </a>
+                        <a href="mailto:info@briandres.com" target="_blank" class="social__icon">
+                            <img src="IMG/SOCIAL/SVG/Email.svg" alt="Correo electrónico">
+                        </a>
+                    </div>
+
+                    <div class="suscibre__container">
+                        <h3 class="footer__section-title">Suscríbete ahora</h3>
+                        <form action="" class="suscibre__container-form">
+                            <input type="email" class="suscibre__container-input input" placeholder="nombre@dominio.com">
+                        <a type="submit" class="button button-primary suscibre__container-button">Suscribirme</a>
+                        </form>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="footer__copy">
+            <p class="footer__copy-text" id="copyright">
+                Copyright &copy
+                <spam id="current-year"></spam>
+                Todos los derechos reservados. Hecho por
+                <a href="/" >briandres Inc.</a>
+            </p>
+        </section>
+    </footer>
+
+    <script type="text/javascript" src="briandres.js"></script>
+</body>
+</html>
