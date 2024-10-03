@@ -14,6 +14,7 @@ function openNav() {
 }
 
 function closeNav() {
+    if (event) event.preventDefault();
     document.getElementById("mobile-menu").style.width = "0%";
     document.body.style.overflow = "auto";  // Restaurar scroll en el body
 }
