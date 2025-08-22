@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jorge Augusto Yépez Herrera | Abogado Especialista</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        body {
+            overflow-x: hidden;
+        }
+        .scroll-mt-24 {
+            scroll-margin-top: 6rem;
+        }
+        /* Gradient animations */
+        .gradient-bg {
+            background: linear-gradient(-45deg, #1e40af, #3b82f6, #1d4ed8, #2563eb);
+            background-size: 400% 400%;
+            animation: gradientShift 15s ease infinite;
+        }
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        /* Floating animation */
+        .float {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+            100% { transform: translateY(0px); }
+        }
+        /* Card hover effects */
+        .service-card {
+            transition: all 0.3s ease;
+            transform: perspective(1000px) rotateX(0deg);
+        }
+        .service-card:hover {
+            transform: perspective(1000px) rotateX(5deg) translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        /* Glowing effect */
+        .glow {
+            box-shadow: 0 0 20px rgba(59, 130, 246, 0.5);
+        }
+        .glow:hover {
+            box-shadow: 0 0 30px rgba(59, 130, 246, 0.8);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 antialiased">
+
+    <!-- Header -->
+    <header class="bg-white/95 backdrop-blur-sm sticky top-0 z-50 shadow-lg border-b border-gray-100">
+        <nav class="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex justify-between items-center">
+            <!-- Logo -->
+            <a href="#inicio" class="flex-shrink-0 flex items-center group">
+                <img src="img/jy.svg" alt="JY Legal" class="h-12 w-auto transition-all duration-300 group-hover:scale-110">
+            </a>
+            
+            <!-- Desktop Nav -->
+            <div class="hidden md:flex space-x-8 lg:space-x-12">
+                <a href="#inicio" class="text-lg font-medium hover:text-blue-600 transition duration-300 relative group">
+                    Inicio
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#servicios" class="text-lg font-medium hover:text-blue-600 transition duration-300 relative group">
+                    Servicios
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#sobre-mi" class="text-lg font-medium hover:text-blue-600 transition duration-300 relative group">
+                    Sobre Mí
+                    <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-600 transition-all duration-300 group-hover:w-full"></span>
+                </a>
+                <a href="#contacto" class="bg-blue-600 text-white hover:bg-blue-700 transition duration-300 text-lg font-semibold py-2 px-6 rounded-full shadow-lg hover:shadow-xl">
+                    Contacto
+                </a>
+            </div>
+
+            <!-- Mobile menu button -->
+            <div class="md:hidden">
+                <button id="mobile-menu-button" class="text-gray-800 hover:text-blue-600 focus:outline-none p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+        </nav>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white/95 backdrop-blur-sm shadow-lg">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#inicio" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition duration-300">Inicio</a>
+                <a href="#servicios" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition duration-300">Servicios</a>
+                <a href="#sobre-mi" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition duration-300">Sobre Mí</a>
+                <a href="#contacto" class="block px-3 py-2 text-base font-medium text-gray-800 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition duration-300">Contacto</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Inicio Section -->
+        <section id="inicio" class="min-h-screen flex items-center justify-center text-center gradient-bg text-white p-4 relative overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute top-20 left-10 opacity-10">
+                <i data-lucide="scale" class="w-32 h-32 float"></i>
+            </div>
+            <div class="absolute bottom-20 right-10 opacity-10">
+                <i data-lucide="shield-check" class="w-24 h-24 float" style="animation-delay: -3s;"></i>
+            </div>
+            
+            <div class="max-w-5xl mx-auto relative z-10">
+                <div class="mb-8">
+                    <div class="inline-block bg-white/20 backdrop-blur-sm rounded-full p-4 mb-6">
+                        <i data-lucide="briefcase" class="w-12 h-12 text-white"></i>
+                    </div>
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight leading-tight mb-6">
+                    JORGE AUGUSTO<br>
+                    <span class="text-yellow-300">YÉPEZ HERRERA</span>
+                </h1>
+                
+                <div class="flex flex-wrap justify-center gap-4 mb-8">
+                    <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-lg font-medium">
+                        <i data-lucide="graduation-cap" class="w-5 h-5 inline mr-2"></i>
+                        Abogado
+                    </span>
+                    <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-lg font-medium">
+                        <i data-lucide="award" class="w-5 h-5 inline mr-2"></i>
+                        Magíster
+                    </span>
+                    <span class="bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-lg font-medium">
+                        <i data-lucide="users" class="w-5 h-5 inline mr-2"></i>
+                        5+ Años Exp.
+                    </span>
+                </div>
+                
+                <p class="text-xl sm:text-2xl lg:text-3xl font-light opacity-90 mb-8 max-w-4xl mx-auto">
+                    Especialista en Derecho Administrativo, Laboral y Constitucional con sólida formación académica y amplia experiencia en el sector público y privado.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                    <a href="#contacto" class="bg-white text-blue-700 hover:bg-gray-100 transition duration-300 text-lg font-semibold py-4 px-8 rounded-full shadow-lg hover:shadow-xl glow flex items-center">
+                        <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                        Consulta Gratuita
+                    </a>
+                    <a href="#servicios" class="border-2 border-white text-white hover:bg-white hover:text-blue-700 transition duration-300 text-lg font-semibold py-4 px-8 rounded-full flex items-center">
+                        <i data-lucide="arrow-down" class="w-5 h-5 mr-2"></i>
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Servicios Section -->
+        <section id="servicios" class="py-24 bg-gradient-to-br from-gray-50 to-blue-50 scroll-mt-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Servicios Especializados</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Ofrezco asesoría legal integral con un enfoque personalizado para garantizar los mejores resultados en cada caso.</p>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Servicio 1 -->
+                    <div class="service-card bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-gradient-to-r from-blue-500 to-blue-600 p-3 rounded-xl">
+                                <i data-lucide="building-2" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 ml-4">Derecho Administrativo</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Representación especializada en procesos contra entidades estatales, recursos administrativos y defensa de derechos ciudadanos.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Recursos de apelación</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Procesos contenciosos</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Defensa ante el Estado</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Servicio 2 -->
+                    <div class="service-card bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-gradient-to-r from-green-500 to-green-600 p-3 rounded-xl">
+                                <i data-lucide="users" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 ml-4">Derecho Laboral</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Defensa integral de derechos laborales tanto para trabajadores como empleadores en todas las instancias judiciales.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Despidos injustificados</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Liquidaciones laborales</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Contratos de trabajo</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 3 -->
+                    <div class="service-card bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-gradient-to-r from-purple-500 to-purple-600 p-3 rounded-xl">
+                                <i data-lucide="shield-check" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 ml-4">LOSEP</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Asesoría especializada en Ley Orgánica del Servicio Público para servidores públicos en todas las materias.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Sumarios administrativos</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Nombramientos y remociones</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Régimen disciplinario</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Servicio 4 -->
+                    <div class="service-card bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-gradient-to-r from-orange-500 to-orange-600 p-3 rounded-xl">
+                                <i data-lucide="building" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 ml-4">Derecho Corporativo</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Constitución de sociedades, asesoría empresarial y redacción de contratos civiles y comerciales.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Constitución de compañías</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Contratos comerciales</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Asesoría empresarial</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 5 -->
+                    <div class="service-card bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-gradient-to-r from-red-500 to-red-600 p-3 rounded-xl">
+                                <i data-lucide="scale" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 ml-4">Derecho Constitucional</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Protección de derechos fundamentales mediante acciones constitucionales y defensa en materia penal.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Acciones de protección</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Habeas corpus</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Defensa penal</li>
+                        </ul>
+                    </div>
+
+                    <!-- Servicio 6 -->
+                    <div class="service-card bg-white rounded-2xl shadow-xl p-8 border border-gray-100">
+                        <div class="flex items-center mb-6">
+                            <div class="bg-gradient-to-r from-teal-500 to-teal-600 p-3 rounded-xl">
+                                <i data-lucide="file-text" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-gray-900 ml-4">Redacción Legal</h3>
+                        </div>
+                        <p class="text-gray-600 leading-relaxed mb-4">
+                            Elaboración de documentos legales personalizados con máxima seguridad jurídica para sus transacciones.
+                        </p>
+                        <ul class="text-sm text-gray-500 space-y-2">
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Contratos civiles</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Documentos notariales</li>
+                            <li class="flex items-center"><i data-lucide="check" class="w-4 h-4 text-green-500 mr-2"></i>Asesoría preventiva</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sobre Mí Section -->
+        <section id="sobre-mi" class="py-24 bg-white scroll-mt-24">
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold text-gray-900 mb-6">Mi Perfil Profesional</h2>
+                    <p class="text-xl text-gray-600 max-w-3xl mx-auto">Más de 5 años dedicado a la excelencia en el servicio legal, con formación académica sólida y experiencia diversificada.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    <!-- Información profesional -->
+                    <div class="space-y-8">
+                        <!-- Stats -->
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="text-center p-6 bg-gradient-to-br from-blue-50 to-blue-100 rounded-xl">
+                                <div class="text-3xl font-bold text-blue-600 mb-2">5+</div>
+                                <div class="text-gray-600 font-medium">Años de Experiencia</div>
+                            </div>
+                            <div class="text-center p-6 bg-gradient-to-br from-green-50 to-green-100 rounded-xl">
+                                <div class="text-3xl font-bold text-green-600 mb-2">500+</div>
+                                <div class="text-gray-600 font-medium">Casos Exitosos</div>
+                            </div>
+                        </div>
+
+                        <!-- Resumen -->
+                        <div class="bg-gray-50 rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-4 flex items-center">
+                                <i data-lucide="user" class="w-6 h-6 mr-3 text-blue-600"></i>
+                                Resumen Profesional
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed">
+                                Abogado titulado con amplia experiencia en el sector público y privado. Mi formación académica de posgrado y trayectoria profesional me permite ofrecer asesoría legal especializada con un enfoque integral y personalizado para cada cliente.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Formación y experiencia -->
+                    <div class="space-y-8">
+                        <!-- Formación -->
+                        <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-2xl p-8 text-white">
+                            <h3 class="text-2xl font-bold mb-6 flex items-center">
+                                <i data-lucide="graduation-cap" class="w-6 h-6 mr-3"></i>
+                                Formación Académica
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="border-l-4 border-yellow-300 pl-4">
+                                    <h4 class="font-semibold">Doctorado en Derecho (En curso)</h4>
+                                    <p class="text-blue-100">Universidad Nacional de Mar del Plata, Argentina</p>
+                                </div>
+                                <div class="border-l-4 border-yellow-300 pl-4">
+                                    <h4 class="font-semibold">Magíster en Gestión del Talento Humano (2022)</h4>
+                                    <p class="text-blue-100">Pontificia Universidad Católica del Ecuador</p>
+                                </div>
+                                <div class="border-l-4 border-yellow-300 pl-4">
+                                    <h4 class="font-semibold">Abogado (2019)</h4>
+                                    <p class="text-blue-100">Universidad de Las Américas, Quito</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Experiencia destacada -->
+                        <div class="bg-gray-50 rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold text-gray-900 mb-6 flex items-center">
+                                <i data-lucide="briefcase" class="w-6 h-6 mr-3 text-blue-600"></i>
+                                Experiencia Destacada
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-blue-100 p-2 rounded-lg">
+                                        <i data-lucide="balance-scale" class="w-5 h-5 text-blue-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Abogado en Libre Ejercicio</h4>
+                                        <p class="text-gray-600">Especialización en múltiples áreas del derecho</p>
+                                    </div>
+                                </div>
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-green-100 p-2 rounded-lg">
+                                        <i data-lucide="shield" class="w-5 h-5 text-green-600"></i>
+                                    </div>
+                                    <div>
+                                        <h4 class="font-semibold text-gray-900">Ex-Comisario Nacional</h4>
+                                        <p class="text-gray-600">Experiencia en seguridad ciudadana y orden público</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contacto Section -->
+        <section id="contacto" class="py-24 gradient-bg text-white scroll-mt-24 relative overflow-hidden">
+            <!-- Decorative elements -->
+            <div class="absolute top-10 right-10 opacity-10">
+                <i data-lucide="phone" class="w-32 h-32 float"></i>
+            </div>
+            <div class="absolute bottom-10 left-10 opacity-10">
+                <i data-lucide="mail" class="w-24 h-24 float" style="animation-delay: -2s;"></i>
+            </div>
+            
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+                <div class="text-center mb-16">
+                    <h2 class="text-4xl sm:text-5xl font-bold mb-6">Consulta Gratuita</h2>
+                    <p class="text-xl opacity-90 max-w-3xl mx-auto">¿Necesitas asesoría legal especializada? Contacta conmigo para una consulta inicial sin costo y encuentra la mejor solución para tu caso.</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+                    <!-- Información de contacto -->
+                    <div class="space-y-8">
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold mb-6 flex items-center">
+                                <i data-lucide="map-pin" class="w-6 h-6 mr-3 text-yellow-300"></i>
+                                Información de Contacto
+                            </h3>
+                            
+                            <div class="space-y-6">
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-white/20 p-3 rounded-lg">
+                                        <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Teléfono</p>
+                                        <a href="tel:0999933361" class="text-yellow-300 hover:text-yellow-200 transition">099 993 3361</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-white/20 p-3 rounded-lg">
+                                        <i data-lucide="mail" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Email</p>
+                                        <a href="mailto:jyepezlexis@gmail.com" class="text-yellow-300 hover:text-yellow-200 transition">jyepezlexis@gmail.com</a>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-start space-x-4">
+                                    <div class="bg-white/20 p-3 rounded-lg">
+                                        <i data-lucide="map-pin" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Dirección</p>
+                                        <p class="text-blue-100">Rocafuerte y Grijalva 3-50<br>Ibarra, Imbabura - Ecuador</p>
+                                    </div>
+                                </div>
+                                
+                                <div class="flex items-center space-x-4">
+                                    <div class="bg-white/20 p-3 rounded-lg">
+                                        <i data-lucide="clock" class="w-6 h-6 text-white"></i>
+                                    </div>
+                                    <div>
+                                        <p class="font-semibold">Horarios de Atención</p>
+                                        <p class="text-blue-100">Lunes a Viernes: 8:00 AM - 6:00 PM<br>Sábados: 9:00 AM - 2:00 PM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Razones para elegirme -->
+                        <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8">
+                            <h3 class="text-2xl font-bold mb-6 flex items-center">
+                                <i data-lucide="star" class="w-6 h-6 mr-3 text-yellow-300"></i>
+                                ¿Por qué elegirme?
+                            </h3>
+                            <div class="space-y-4">
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-300 mt-1"></i>
+                                    <p class="text-blue-100">Consulta inicial gratuita y sin compromiso</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-300 mt-1"></i>
+                                    <p class="text-blue-100">Atención personalizada las 24 horas</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-300 mt-1"></i>
+                                    <p class="text-blue-100">Experiencia comprobada en múltiples áreas</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-300 mt-1"></i>
+                                    <p class="text-blue-100">Tarifas competitivas y transparentes</p>
+                                </div>
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-300 mt-1"></i>
+                                    <p class="text-blue-100">Seguimiento constante de tu caso</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de contacto mejorado -->
+                    <div class="bg-white/15 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+                        <div class="text-center mb-8">
+                            <div class="bg-green-500 rounded-full p-4 inline-block mb-4">
+                                <i data-lucide="message-circle" class="w-8 h-8 text-white"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-2">Contacto Directo por WhatsApp</h3>
+                            <p class="text-blue-100">Completa el formulario y te contactaré inmediatamente</p>
+                        </div>
+
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label for="name" class="block text-sm font-medium mb-2 flex items-center">
+                                        <i data-lucide="user" class="w-4 h-4 mr-2"></i>
+                                        Nombre completo *
+                                    </label>
+                                    <input type="text" id="name" name="name" required 
+                                           placeholder="Ej: María González"
+                                           class="w-full px-4 py-3 rounded-lg bg-white/90 border-0 focus:ring-2 focus:ring-yellow-300 text-gray-900 placeholder-gray-500 transition-all duration-300">
+                                </div>
+                                <div>
+                                    <label for="phone" class="block text-sm font-medium mb-2 flex items-center">
+                                        <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                                        Teléfono *
+                                    </label>
+                                    <input type="tel" id="phone" name="phone" required 
+                                           placeholder="Ej: 099 123 4567"
+                                           class="w-full px-4 py-3 rounded-lg bg-white/90 border-0 focus:ring-2 focus:ring-yellow-300 text-gray-900 placeholder-gray-500 transition-all duration-300">
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium mb-2 flex items-center">
+                                    <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                                    Email (opcional)
+                                </label>
+                                <input type="email" id="email" name="email" 
+                                       placeholder="Ej: maria@email.com"
+                                       class="w-full px-4 py-3 rounded-lg bg-white/90 border-0 focus:ring-2 focus:ring-yellow-300 text-gray-900 placeholder-gray-500 transition-all duration-300">
+                            </div>
+
+                            <div>
+                                <label for="legal-area" class="block text-sm font-medium mb-2 flex items-center">
+                                    <i data-lucide="scale" class="w-4 h-4 mr-2"></i>
+                                    Área legal de interés *
+                                </label>
+                                <select id="legal-area" name="legal-area" required 
+                                        class="w-full px-4 py-3 rounded-lg bg-white/90 border-0 focus:ring-2 focus:ring-yellow-300 text-gray-900 transition-all duration-300">
+                                    <option value="">Selecciona un área</option>
+                                    <option value="derecho-administrativo">Derecho Administrativo</option>
+                                    <option value="derecho-laboral">Derecho Laboral</option>
+                                    <option value="losep">LOSEP (Servicio Público)</option>
+                                    <option value="derecho-corporativo">Derecho Corporativo</option>
+                                    <option value="derecho-constitucional">Derecho Constitucional</option>
+                                    <option value="redaccion-contratos">Redacción de Contratos</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="urgency" class="block text-sm font-medium mb-2 flex items-center">
+                                    <i data-lucide="clock" class="w-4 h-4 mr-2"></i>
+                                    Urgencia del caso *
+                                </label>
+                                <select id="urgency" name="urgency" required 
+                                        class="w-full px-4 py-3 rounded-lg bg-white/90 border-0 focus:ring-2 focus:ring-yellow-300 text-gray-900 transition-all duration-300">
+                                    <option value="">Selecciona la urgencia</option>
+                                    <option value="alta">Alta - Necesito atención inmediata</option>
+                                    <option value="media">Media - En los próximos días</option>
+                                    <option value="baja">Baja - Solo información inicial</option>
+                                </select>
+                            </div>
+                            
+                            <div>
+                                <label for="message" class="block text-sm font-medium mb-2 flex items-center">
+                                    <i data-lucide="message-square" class="w-4 h-4 mr-2"></i>
+                                    Describe tu situación *
+                                </label>
+                                <textarea id="message" name="message" rows="4" required 
+                                          placeholder="Describe brevemente tu situación legal, fechas importantes, documentos que tienes, etc."
+                                          class="w-full px-4 py-3 rounded-lg bg-white/90 border-0 focus:ring-2 focus:ring-yellow-300 text-gray-900 placeholder-gray-500 resize-none transition-all duration-300"></textarea>
+                            </div>
+
+                            <div class="bg-white/10 p-4 rounded-lg">
+                                <div class="flex items-start space-x-3">
+                                    <i data-lucide="info" class="w-5 h-5 text-yellow-300 mt-0.5"></i>
+                                    <div class="text-sm text-blue-100">
+                                        <p class="font-medium mb-1">Información importante:</p>
+                                        <ul class="space-y-1 text-xs">
+                                            <li>• La consulta inicial es completamente gratuita</li>
+                                            <li>• Te contactaré en máximo 30 minutos</li>
+                                            <li>• Toda la información es confidencial</li>
+                                            <li>• No hay compromiso hasta que decidas contratar</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <button type="submit" class="w-full flex items-center justify-center bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 transition duration-300 text-white font-bold py-4 px-6 rounded-lg shadow-lg hover:shadow-xl transform hover:scale-105">
+                                <i data-lucide="send" class="w-5 h-5 mr-2"></i>
+                                Enviar Consulta por WhatsApp
+                            </button>
+                        </form>
+
+                        <!-- Contacto directo alternativo -->
+                        <div class="mt-8 pt-6 border-t border-white/20">
+                            <p class="text-center text-blue-100 mb-4">¿Prefieres contacto directo?</p>
+                            <div class="flex flex-col sm:flex-row gap-3">
+                                <a href="https://wa.me/593999933361?text=Hola%20Jorge,%20necesito%20asesor%C3%ADa%20legal" 
+                                   target="_blank"
+                                   class="flex-1 bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition duration-300">
+                                    <i data-lucide="message-circle" class="w-5 h-5 mr-2"></i>
+                                    WhatsApp Directo
+                                </a>
+                                <a href="tel:0999933361" 
+                                   class="flex-1 bg-white/20 hover:bg-white/30 text-white font-semibold py-3 px-4 rounded-lg flex items-center justify-center transition duration-300">
+                                    <i data-lucide="phone" class="w-5 h-5 mr-2"></i>
+                                    Llamar Ahora
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-16">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+                <!-- Logo and Description -->
+                <div class="col-span-full md:col-span-2">
+                    <div class="flex items-center mb-6">
+                        <div class="bg-gradient-to-r from-blue-600 to-blue-800 text-white rounded-full p-3 shadow-lg">
+                            <i data-lucide="scale" class="w-6 h-6"></i>
+                        </div>
+                        <span class="ml-3 text-2xl font-bold text-white">Jorge Augusto Yépez Herrera</span>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed mb-6 max-w-md">
+                        Abogado especialista comprometido con la excelencia legal y la protección de los derechos de mis clientes. Más de 5 años de experiencia respaldando tu tranquilidad jurídica.
+                    </p>
+                    <div class="flex space-x-4">
+                        <!-- LinkedIn -->
+                        <a href="https://linkedin.com/in/jorge-yepez" target="_blank" 
+                           class="bg-gray-800 hover:bg-blue-600 p-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            <i data-lucide="linkedin" class="w-5 h-5"></i>
+                        </a>
+                        <!-- Facebook -->
+                        <a href="https://facebook.com/jyepezlexis" target="_blank" 
+                           class="bg-gray-800 hover:bg-blue-500 p-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            <i data-lucide="facebook" class="w-5 h-5"></i>
+                        </a>
+                        <!-- Instagram -->
+                        <a href="https://instagram.com/jyepezlexis" target="_blank" 
+                           class="bg-gray-800 hover:bg-pink-500 p-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            <i data-lucide="instagram" class="w-5 h-5"></i>
+                        </a>
+                        <!-- WhatsApp -->
+                        <a href="https://wa.me/593999933361" target="_blank" 
+                           class="bg-gray-800 hover:bg-green-500 p-3 rounded-lg transition-all duration-300 transform hover:scale-105">
+                            <i data-lucide="message-circle" class="w-5 h-5"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6 flex items-center">
+                        <i data-lucide="map-pin" class="w-5 h-5 mr-2 text-blue-400"></i>
+                        Contacto
+                    </h4>
+                    <div class="space-y-4">
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="phone" class="w-4 h-4 text-blue-400"></i>
+                            <a href="tel:0999933361" class="hover:text-white transition-colors duration-300">
+                                099 993 3361
+                            </a>
+                        </div>
+                        <div class="flex items-center space-x-3">
+                            <i data-lucide="mail" class="w-4 h-4 text-blue-400"></i>
+                            <a href="mailto:jyepezlexis@gmail.com" class="hover:text-white transition-colors duration-300">
+                                jyepezlexis@gmail.com
+                            </a>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i data-lucide="map-pin" class="w-4 h-4 text-blue-400 mt-1"></i>
+                            <div>
+                                <p>Rocafuerte y Grijalva 3-50</p>
+                                <p>Ibarra, Imbabura - Ecuador</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="text-lg font-semibold text-white mb-6 flex items-center">
+                        <i data-lucide="compass" class="w-5 h-5 mr-2 text-blue-400"></i>
+                        Enlaces Rápidos
+                    </h4>
+                    <ul class="space-y-3">
+                        <li>
+                            <a href="#inicio" class="hover:text-white transition-colors duration-300 flex items-center">
+                                <i data-lucide="home" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                Inicio
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#servicios" class="hover:text-white transition-colors duration-300 flex items-center">
+                                <i data-lucide="briefcase" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                Servicios
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#sobre-mi" class="hover:text-white transition-colors duration-300 flex items-center">
+                                <i data-lucide="user" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                Sobre Mí
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contacto" class="hover:text-white transition-colors duration-300 flex items-center">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2 text-blue-400"></i>
+                                Contacto
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <!-- Bottom Footer -->
+            <div class="mt-12 pt-8 border-t border-gray-800">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-sm text-gray-400">
+                        &copy; 2024 Jorge Augusto Yépez Herrera. Todos los derechos reservados.
+                    </p>
+                    <div class="flex items-center space-x-6 mt-4 md:mt-0">
+                        <span class="text-sm text-gray-400 flex items-center">
+                            <i data-lucide="shield-check" class="w-4 h-4 mr-2 text-green-400"></i>
+                            Sitio Web Seguro
+                        </span>
+                        <span class="text-sm text-gray-400 flex items-center">
+                            <i data-lucide="clock" class="w-4 h-4 mr-2 text-blue-400"></i>
+                            Disponible 24/7
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Inicializar iconos de Lucide
+        lucide.createIcons();
+
+        // Funcionalidad para el menú móvil
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Cierra el menú móvil al hacer clic en un enlace
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Funcionalidad mejorada para el formulario de WhatsApp
+        const contactForm = document.getElementById('contact-form');
+        contactForm.addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value;
+            const phone = document.getElementById('phone').value;
+            const email = document.getElementById('email').value;
+            const legalArea = document.getElementById('legal-area').value;
+            const urgency = document.getElementById('urgency').value;
+            const message = document.getElementById('message').value;
+
+            // Mapear áreas legales a texto legible
+            const areaMap = {
+                'derecho-administrativo': 'Derecho Administrativo',
+                'derecho-laboral': 'Derecho Laboral', 
+                'losep': 'LOSEP (Servicio Público)',
+                'derecho-corporativo': 'Derecho Corporativo',
+                'derecho-constitucional': 'Derecho Constitucional',
+                'redaccion-contratos': 'Redacción de Contratos',
+                'otro': 'Otra área'
+            };
+
+            const urgencyMap = {
+                'alta': 'URGENTE - Necesito atención inmediata',
+                'media': 'Moderada - En los próximos días',
+                'baja': 'Baja - Solo información inicial'
+            };
+
+            // Construir mensaje estructurado para WhatsApp
+            let whatsappMessage = `🏛️ *CONSULTA LEGAL* 🏛️\n\n`;
+            whatsappMessage += `👤 *Nombre:* ${name}\n`;
+            whatsappMessage += `📱 *Teléfono:* ${phone}\n`;
+            if (email) whatsappMessage += `✉️ *Email:* ${email}\n`;
+            whatsappMessage += `⚖️ *Área Legal:* ${areaMap[legalArea] || legalArea}\n`;
+            whatsappMessage += `🚨 *Urgencia:* ${urgencyMap[urgency] || urgency}\n\n`;
+            whatsappMessage += `📝 *Descripción del caso:*\n${message}\n\n`;
+            whatsappMessage += `---\n`;
+            whatsappMessage += `✅ Solicito consulta inicial gratuita\n`;
+            whatsappMessage += `🌐 Contacto desde sitio web oficial`;
+            
+            // Número de WhatsApp con código de país Ecuador
+            const phoneNumber = '593999933361';
+            
+            // URL de WhatsApp con mensaje codificado
+            const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+            
+            // Abrir WhatsApp en nueva pestaña
+            window.open(whatsappUrl, '_blank');
+
+            // Opcional: Mostrar mensaje de confirmación
+            const submitButton = event.target.querySelector('button[type="submit"]');
+            const originalText = submitButton.innerHTML;
+            submitButton.innerHTML = '<i data-lucide="check-circle" class="w-5 h-5 mr-2"></i>¡Mensaje Enviado!';
+            submitButton.classList.add('bg-green-600');
+            
+            setTimeout(() => {
+                submitButton.innerHTML = originalText;
+                submitButton.classList.remove('bg-green-600');
+                lucide.createIcons(); // Recrear iconos después del cambio
+            }, 3000);
+        });
+
+        // Validación en tiempo real del formulario
+        const requiredFields = ['name', 'phone', 'legal-area', 'urgency', 'message'];
+        requiredFields.forEach(fieldId => {
+            const field = document.getElementById(fieldId);
+            field.addEventListener('blur', function() {
+                if (this.value.trim() === '') {
+                    this.classList.add('ring-2', 'ring-red-400');
+                } else {
+                    this.classList.remove('ring-red-400');
+                    this.classList.add('ring-2', 'ring-green-400');
+                    setTimeout(() => {
+                        this.classList.remove('ring-green-400');
+                    }, 2000);
+                }
+            });
+        });
+
+        // Smooth scrolling mejorado
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
